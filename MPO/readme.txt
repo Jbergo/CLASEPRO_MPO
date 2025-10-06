@@ -1,1 +1,0 @@
-Esta carpeta es para MPO - Ampliación a la Programación
