@@ -89,4 +89,14 @@ public class Operadores {
         //cerrar flujo de datos -> buena práctica
         lectorTeclado.close();
     }
+
+    public void cambiosTipo () {
+//        int letraASCII = 115;
+//        String palabra = "7";
+        int numero = 7;
+
+//        System.out.println(Integer.parseInt(palabra));
+        System.out.println(String.valueOf(numero));
+
+    }
 }
