@@ -241,13 +241,18 @@ public class EjerciciosT2 {
         System.out.println("¿Has hecho horas extra?");
         boolean tieneExtra = sc.nextBoolean();
 
-        double salarioMensual = 0;
+        double salarioMensual;
         if (tieneExtra && horas>40) {
-            salarioMensual = salarioHora*horas;
-            double horasExtra = (horas - 40)*(salarioHora*2);
+            double horasFijas = 40;
+            double horasExtra = horas - horasFijas;
 
+            salarioMensual =  (horasFijas*salarioHora) + (horasExtra*salarioHora*2);
+
+        } else {
+            salarioMensual =  horas*salarioHora;
         }
 
+        System.out.println("El salario mensual es de: "+salarioMensual);
         sc.close();
     }
 }

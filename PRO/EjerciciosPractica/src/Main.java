@@ -6,7 +6,9 @@ public class Main {
 
         /*EJERCICIOS TEMA 2*/
         EjerciciosT2 ejerciciosT2 = new EjerciciosT2();
-        ejerciciosT2.ejercicio9();
 
+        /*EJERCICIOS TEMA 3*/
+        EjerciciosT3 ejerciciosT3 = new EjerciciosT3();
+        ejerciciosT3.ejercicio11();
     }
 }
