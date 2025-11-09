@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class EjerciciosT3 {
     Scanner sc = new Scanner(System.in);
+
     public void ejercicio1() {
         /*
          Crea un programa que pida la edad del usuario y
@@ -12,7 +13,7 @@ public class EjerciciosT3 {
         System.out.println("Introduce tu edad:");
         int edad = sc.nextInt();
 
-        if (edad>=0) {
+        if (edad >= 0) {
             if (edad >= 18) {
                 System.out.println("Eres mayor de edad");
             } else {
@@ -35,9 +36,9 @@ public class EjerciciosT3 {
         System.out.println("Introuce un número");
         int num = sc.nextInt();
 
-        if (num==0) {
+        if (num == 0) {
             System.out.println("El número es 0.");
-        } else if (num<0){
+        } else if (num < 0) {
             System.out.println("Número negativo.");
         } else {
             System.out.println("Número positivo.");
@@ -55,8 +56,8 @@ public class EjerciciosT3 {
         System.out.println("Escribe un número entre 0-10");
         int num = sc.nextInt();
 
-        if (num<=10 && num>=0){
-            if (num>=5){
+        if (num <= 10 && num >= 0) {
+            if (num >= 5) {
                 System.out.println("Has aprbado");
             } else {
                 System.out.println("Has suspendido");
@@ -77,8 +78,8 @@ public class EjerciciosT3 {
         System.out.println("Introduce el importe de tu última compra");
         double importe = sc.nextDouble();
 
-        if (importe>=100) {
-            double descuento = (importe*10)/100;
+        if (importe >= 100) {
+            double descuento = (importe * 10) / 100;
             double resultado = importe - descuento;
             System.out.println(resultado);
         } else {
@@ -97,15 +98,15 @@ public class EjerciciosT3 {
         System.out.println("Introduce un número entero");
         int num = sc.nextInt();
 
-        if (num%2==0) {
+        if (num % 2 == 0) {
             System.out.println("Número par");
         } else {
             System.out.println("Número impar");
         }
-    sc.close();
+        sc.close();
     }
 
-    public void ejercicio6(){
+    public void ejercicio6() {
         /*
          Escribe un programa que pida la edad del usuario y
          determine si puede acceder a contenido para mayores de 16 años.
@@ -116,8 +117,8 @@ public class EjerciciosT3 {
         System.out.println("Introduce la edad que tienes");
         int edad = sc.nextInt();
 
-        if (edad>=0){
-            if (edad>=16){
+        if (edad >= 0) {
+            if (edad >= 16) {
                 System.out.println("Acceso permitido");
             } else {
                 System.out.println("Acceso denegado");
@@ -139,12 +140,12 @@ public class EjerciciosT3 {
         System.out.println("Introduce una nota entre 0-10");
         double nota = sc.nextDouble();
 
-        if (nota<=10&&nota>=0){
-            if (nota<=4){
+        if (nota <= 10 && nota >= 0) {
+            if (nota <= 4) {
                 System.out.println("Suspenso");
-            } else if (nota<=6){
+            } else if (nota <= 6) {
                 System.out.println("Aprobado");
-            } else if (nota<=8){
+            } else if (nota <= 8) {
                 System.out.println("Notable");
             } else {
                 System.out.println("Sobresaliente");
@@ -163,21 +164,21 @@ public class EjerciciosT3 {
         */
 
         System.out.println("Introduce dos números");
-        int num1= sc.nextInt();
+        int num1 = sc.nextInt();
         int num2 = sc.nextInt();
 
-        if (num1>num2) {
-            System.out.println(num1+" es mayor que "+ num2);
-        } else if (num1<num2) {
-            System.out.println(num1+" es menor que "+ num2);
+        if (num1 > num2) {
+            System.out.println(num1 + " es mayor que " + num2);
+        } else if (num1 < num2) {
+            System.out.println(num1 + " es menor que " + num2);
         } else {
-            System.out.println(num1+" es igual que "+ num2);
+            System.out.println(num1 + " es igual que " + num2);
         }
         sc.close();
 
     }
 
-    public void ejercicio9(){
+    public void ejercicio9() {
         /*
          Escribe un programa que pida el peso (en kg) y la altura
          (en metros) del usuario. Calcula el IMC (peso / altura²) y
@@ -191,10 +192,10 @@ public class EjerciciosT3 {
         System.out.println("Introduce tu altura en m");
         double altura = sc.nextDouble();
 
-        double imc = peso/(altura*altura);
-        if (imc>=18.5&&imc<=24.9){
+        double imc = peso / (altura * altura);
+        if (imc >= 18.5 && imc <= 24.9) {
             System.out.println("Peso normal");
-        } else if (imc<18.5) {
+        } else if (imc < 18.5) {
             System.out.println("Por debajo del peso normal");
         } else {
             System.out.println("Por encima del peso normal");
@@ -202,7 +203,7 @@ public class EjerciciosT3 {
         sc.close();
     }
 
-    public void ejercicio10(){
+    public void ejercicio10() {
         /*
          Crea un programa que pida la altura del usuario (en cm) y
          determine si puede subir a una atracción.
@@ -214,9 +215,9 @@ public class EjerciciosT3 {
         System.out.println("Introduce tu altura en cm");
         int altura = sc.nextInt();
 
-        if (altura>=120&&altura<=200){
+        if (altura >= 120 && altura <= 200) {
             System.out.println("Puedes subir");
-        } else if (altura>200) {
+        } else if (altura > 200) {
             System.out.println("Eres muy alto");
         } else {
             System.out.println("Eres muy bajo");
@@ -240,30 +241,30 @@ public class EjerciciosT3 {
         System.out.println("Introduce el importe de la compra");
         double importe = sc.nextDouble();
         System.out.println("¿Eres cliente? (True/false)");
-        boolean esCliente =sc.nextBoolean();
+        boolean esCliente = sc.nextBoolean();
 
-        double importeFinal=0, descuento=0;
-        if (esCliente&&importe>=200) {
-            descuento = importe*0.2;
-            importeFinal=importe-descuento;
-        } else if (esCliente&&importe<200) {
-            descuento=importe*0.1;
-            importeFinal=importe-descuento;
-        } else if (!esCliente&&importe>=300) {
-            descuento=importe*0.05;
-            importeFinal=importe-descuento;
+        double importeFinal = 0, descuento = 0;
+        if (esCliente && importe >= 200) {
+            descuento = importe * 0.2;
+            importeFinal = importe - descuento;
+        } else if (esCliente && importe < 200) {
+            descuento = importe * 0.1;
+            importeFinal = importe - descuento;
+        } else if (!esCliente && importe >= 300) {
+            descuento = importe * 0.05;
+            importeFinal = importe - descuento;
         } else {
             System.out.println("No aplica descuento");
         }
 
-        System.out.println("Importe original: "+importe);
-        System.out.println("Descuento aplicado: "+descuento);
-        System.out.println("Importe final: "+importeFinal);
+        System.out.println("Importe original: " + importe);
+        System.out.println("Descuento aplicado: " + descuento);
+        System.out.println("Importe final: " + importeFinal);
 
         sc.close();
     }
 
-    public void ejercicio12(){
+    public void ejercicio12() {
         /*
         Crea un programa que pida al usuario crear una contraseña.
         La contraseña debe cumplir estos requisitos: tener al menos
@@ -277,10 +278,155 @@ public class EjerciciosT3 {
         */
 
         System.out.println("Crea una contraseña:");
-        String contraseña = sc.next();
+        String contrasenia = sc.next();
 
-        if (contraseña.length()<8&&contraseña.contains()) {
+        if (contrasenia.length() < 8) { /*en vez de .length() -> longitudCadena(texto)*/
+            System.out.println("La contraseña no cumple con la longitud");
+        } else if (!contrasenia.contains("numero")) { /*en vez de .contains("numero") -> contienNumero(texto)*/
+            System.out.println("La contraseña no contiene un número");
+        } else if (contrasenia.equals("12345678") || contrasenia.equals("password")) {
             System.out.println("Contraseña no válida");
-        } else if(contraseña)
+        } else {
+            System.out.println("Contraseña creada correctamente");
+        }
+
+        sc.close();
+    }
+
+    public void ejercicio13() {
+        /*
+        Escribe un programa para calcular el precio de entrada
+        a un museo. Pide la edad del usuario y el día de la semana
+        (1=Lunes, 2=Martes... 7=Domingo). Las reglas son:
+        Menores de 12 años: entrada gratis. Entre 12 y 17 años:
+        5€ (pero gratis los martes). Entre 18 y 64 años: 10€
+        (pero 7€ los jueves). 65 años o más: 6€. Usa operadores
+        lógicos para determinar el precio correcto y muestra el
+        cálculo.
+        */
+
+        System.out.println("Edad:");
+        int edad = sc.nextInt();
+        System.out.println("Día de la semana (1-7):");
+        int diaSemana = sc.nextInt();
+
+        if (edad < 12) {
+            System.out.println("Entrada gratuíta");
+        } else if (edad > 12 && edad <= 17 && diaSemana == 2) {
+            System.out.println("Entrada gratuíta");
+        } else if (edad > 12 && edad <= 17) {
+            System.out.println("La entrada cuesta 5eur.");
+        } else if (edad > 18 && edad < 64 && diaSemana == 4) {
+            System.out.println("La entrada cuesta 7eur.");
+        } else if (edad > 18 && edad < 64) {
+            System.out.println("La entrada cuesta 10eur.");
+        } else if (edad >= 65) {
+            System.out.println("La entrada cuesta 6eur.");
+        } else {
+            System.out.println("Entrada no permitida");
+        }
+
+        sc.close();
+    }
+
+    public void ejercicio14() {
+        /*
+        Desarrolla un programa que determine si una persona es
+        elegible para un préstamo bancario.
+        Pide: edad, ingresos mensuales (€), y si tiene deudas
+        pendientes (true/false). Los requisitos son:
+        Edad entre 21 y 65 años, ingresos mensuales de al menos
+        1000€, y NO tener deudas pendientes. El programa debe
+        evaluar cada condición y mostrar si es elegible o no,
+        explicando qué requisitos no cumple.
+        */
+
+        System.out.println("Edad");
+        int edad = sc.nextInt();
+        System.out.println("Ingresos mensuales");
+        double ingresosMensuales = sc.nextDouble();
+        System.out.println("Deudas pendientes? (true/false)");
+        boolean deudasPendientes = sc.nextBoolean();
+
+        if (edad < 21 || edad > 65) {
+            System.out.println("No cumple la edad");
+
+        } else if (ingresosMensuales < 1000) {
+            System.out.println("No cumple con los ingresos mínimos");
+
+        } else if (deudasPendientes) {
+            System.out.println("Tiene deudas");
+        } else {
+            System.out.println("Elegible para el préstamo");
+        }
+
+        sc.close();
+    }
+
+    public void ejercicio15() {
+        /*
+        Crea un programa que calcule el coste de envío de un paquete.
+        Pide: peso del paquete (kg), distancia de envío (km), y si es envío urgente
+        (true/false). Las reglas son: Precio base: 5€. Si el peso es mayor de 5kg,
+        añadir 2€ por cada kg adicional. Si la distancia es mayor de 100km, añadir 10€.
+        Si es envío urgente, multiplicar el precio total por 1.5.
+        Muestra todos los cálculos paso a paso.
+        */
+
+        System.out.println("Peso del paquete (kg)");
+        double pesoPaquete = sc.nextDouble();
+        System.out.println("Distancia del envío (km)");
+        int distancia = sc.nextInt();
+        System.out.println("¿Es envío urgente? (true/false)");
+        boolean envioUrgente = sc.nextBoolean();
+
+        int precioBase = 5;
+        double precioFinal = 0;
+        if (pesoPaquete>5&&distancia>100&&envioUrgente){
+            int pesoBase = 5;
+            double pesoAdicional = pesoPaquete-pesoBase;
+
+            precioFinal=((pesoBase*precioBase)+(pesoAdicional*2)+10)*1.5;
+
+            System.out.println("Precio total: "+precioFinal+". Debido al peso, a la distancia y al envío");
+
+        } else if (pesoPaquete>10&&envioUrgente){
+            int pesoBase = 5;
+            double pesoAdicional = pesoPaquete-pesoBase;
+
+            precioFinal=((pesoBase*precioBase)+(pesoAdicional*2))*1.5;
+
+            System.out.println("Precio total: "+precioFinal+". Debido al peso y al envío");
+        } else if (pesoPaquete>10&&distancia>100){
+            int pesoBase = 5;
+            double pesoAdicional = pesoPaquete-pesoBase;
+
+            precioFinal=((pesoBase*precioBase)+(pesoAdicional*2))+100;
+
+            System.out.println("Precio total: "+precioFinal+". Debido al peso y a la distancia");
+        } else if (distancia>=100&&envioUrgente){
+            precioFinal=((pesoPaquete*precioBase)+10)*1.5;
+
+            System.out.println("Precio total: "+precioFinal+". Debido a la distancia y al envío");
+        } else if (pesoPaquete>5){
+            int pesoBase = 5;
+            double pesoAdicional = pesoPaquete-pesoBase;
+
+            precioFinal=(pesoBase*precioBase)+(pesoAdicional*2);
+
+            System.out.println("Precio total: "+precioFinal+". Debido al peso");
+        } else if (distancia>100){
+            precioFinal=(pesoPaquete*precioBase)+10;
+
+            System.out.println("Precio total: "+precioFinal+". Debido a la distancia");
+        } else if (envioUrgente){
+            precioFinal=(pesoPaquete*precioBase)*1.5;
+
+            System.out.println("Precio total: "+precioFinal+". Debido al envío");
+        } else {
+            System.out.println("Opción no contemplada");
+        }
+
+        sc.close();
     }
 }
