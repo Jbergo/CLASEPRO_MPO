@@ -35,54 +35,60 @@ public class Main {
         int p1 = 301;
         int p2 = 301;
 
-        int j1i1, j1i2, j1i3, j2i1, j2i2, j2i3;
-        int sum1, sum2;
-
         int i = 1;
-        do {
-            System.out.println("INTENTO " + i);
-            j1i1 = (int) (Math.random() * 61);
-            j1i2 = (int) (Math.random() * 61);
-            j1i3 = (int) (Math.random() * 61);
+        while (true) {
+            System.out.println("TURNO " + i);
 
-            sum1 = j1i1 + j1i2 + j1i3;
-            p1 -= sum1;
+            /*JUGADOR 1*/
+            int j1i1 = (int) (Math.random() * 61);
+            int j1i2 = (int) (Math.random() * 61);
+            int j1i3 = (int) (Math.random() * 61);
 
-            j2i1 = (int) (Math.random() * 61);
-            j2i2 = (int) (Math.random() * 61);
-            j2i3 = (int) (Math.random() * 61);
+            int sum1 = j1i1 + j1i2 + j1i3;
 
-            sum2 = j2i1 + j2i2 + j2i3;
-            p2 -= sum2;
+            if (p1 - sum1 < 0) {
+                System.out.println("JUGADOR 1 se ha pasado de la puntuación");
+                System.out.println("Vuelve a intentarlo!");
+            } else {
+                p1 -= sum1;
+            }
 
+            /*JUGADOR 2*/
+            int j2i1 = (int) (Math.random() * 61);
+            int j2i2 = (int) (Math.random() * 61);
+            int j2i3 = (int) (Math.random() * 61);
+
+            int sum2 = j2i1 + j2i2 + j2i3;
+
+            if (p2 - sum2 < 0) {
+                System.out.println("JUGADOR 2 se ha pasado de la puntuación");
+                System.out.println("Vuelve a intentarlo!");
+            } else {
+                p2 -= sum2;
+            }
+
+            /*MOSTRAR RESULTADO Y QUIEN VA GANANDO*/
+            System.out.println("RESUMEN INTENTO " + i + ":\n" + "Jugador 1 : " + p1 + "\n" + "Jugador 2 : " + p2);
+            if (p1>p2){
+                System.out.println("¡JUGADOR 1 va por delante!");
+            } else if (p1<p2){
+                System.out.println("¡JUGADOR 2 va por delante!");
+            } else {
+                System.out.println("¡Empate!");
+            }
+
+            /*COMPROBAR GANADOR*/
             if (p1 == 0) {
                 System.out.println("¡JUGADOR 1 HA GANADO LA PARTIDA!");
                 System.out.println("Intentos realizados: " + i);
-                return;
+                break;
             } else if (p2 == 0) {
                 System.out.println("¡JUGADOR 2 HA GANADO LA PARTIDA!");
                 System.out.println("Intentos realizados: " + i);
-                return;
-            } else if (p1 < 0) {
-                System.out.println("JUGADOR 1 se ha pasado de la puntuación");
-                System.out.println("Vuelve a intentarlo!");
-                p1 += sum1;
-                System.out.println("RESUMEN INTENTO " + i + ":\n" + "Jugador 1 : " + p1 + "\n" + "Jugador 2 : " + p2);
-                i++;
-            } else if (p2 < 0) {
-                System.out.println("JUGADOR 2 se ha pasado de la puntuación");
-                System.out.println("Vuelve a intentarlo!");
-                p2 += sum2;
-                System.out.println("RESUMEN INTENTO " + i + ":\n" + "Jugador 1 : " + p1 + "\n" + "Jugador 2 : " + p2);
-                i++;
-            } else {
-                System.out.println("RESUMEN INTENTO " + i + ":\n" + "Jugador 1 : " + p1 + "\n" + "Jugador 2 : " + p2);
-                i++;
+                break;
             }
 
-
-        } while (true);
-
-
+            i++;
+        }
     }
 }
