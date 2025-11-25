@@ -7,6 +7,6 @@ public class Main {
 
         /*EJERCICIOS TEMA 3*/
         EjerciciosSwitchFor ejercicios = new EjerciciosSwitchFor();
-        ejercicios.ejercicio9();
+        ejercicios.ejercicio3();
     }
 }
