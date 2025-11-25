@@ -2,11 +2,13 @@ public class Main {
     public static void main(String[] args) {
 
         /*EJERCICIOS TEMA 1*/
+//        EjerciciosT1 ejercicios = new EjerciciosT1();
 
         /*EJERCICIOS TEMA 2*/
+//        EjerciciosT2 ejercicios = new EjerciciosT2();
 
         /*EJERCICIOS TEMA 3*/
         EjerciciosSwitchFor ejercicios = new EjerciciosSwitchFor();
-        ejercicios.ejercicio3();
+        ejercicios.ejercicio9();
     }
 }

@@ -273,5 +273,33 @@ public class EjerciciosSwitchFor {
         Usa un switch para determinar el ejercicio y un for para
         contar las repeticiones una a una.
         */
+
+        System.out.println("Selecciona un ejercicio");
+        System.out.println("1-Flexiones");
+        System.out.println("2-Abdominales");
+        System.out.println("3-Sentadillas");
+        int opcion = sc.nextInt();
+
+        System.out.println("¿Cuántas repeticiones desea realizar?");
+        int repeticiones = sc.nextInt();
+
+        switch (opcion){
+            case 1 -> {
+                System.out.println("Flexiones:");
+            }
+            case 2 -> {
+                System.out.println("Adbominales:");
+            }
+            case 3 -> {
+                System.out.println("Sentadillas:");
+            }
+        }
+
+        int contadorReps = 0;
+        for (int i = 1; i <= repeticiones ; i++) {
+            contadorReps +=1;
+            System.out.println("Repeticiones: "+contadorReps);
+        }
+        sc.close();
     }
 }
