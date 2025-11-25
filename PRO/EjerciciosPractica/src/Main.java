@@ -15,8 +15,11 @@ public class Main {
 //        EjerciciosSwitchFor ejercicios = new EjerciciosSwitchFor();
 
         /*EJERCICIOS WHILE Y DO-WHILE*/
-        EjerciciosWhileDoWhile ejercicios = new EjerciciosWhileDoWhile();
-        ejercicios.ejercicio10();
+//        EjerciciosWhileDoWhile ejercicios = new EjerciciosWhileDoWhile();
+
+        /*EJERCICIOS ARRAYS UNIDIMENSIONALES*/
+        EjerciciosArraysUnidimensionales ejercicios = new EjerciciosArraysUnidimensionales();
+        ejercicios.ejercicio9();
 
     }
 }
