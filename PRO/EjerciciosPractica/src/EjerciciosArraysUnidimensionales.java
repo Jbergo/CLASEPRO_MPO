@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class EjerciciosArraysUnidimensionales {
@@ -183,6 +184,85 @@ public class EjerciciosArraysUnidimensionales {
         elementos en orden inverso.
         Muestra ambos arrays: el original y el invertido.
         */
+
+        int[] numeros = new int[]{2, 4, 6, 8, 10, 12, 14};
+        int[] numInvertido = new int[numeros.length];
+
+        for (int i = 0; i < numeros.length; i++) {
+            numInvertido[i] = numeros[numeros.length - 1 - i];
+        }
+
+        System.out.println("Array original");
+        for (int item : numeros) {
+            System.out.println(item);
+        }
+
+        System.out.println("Array invertido");
+        for (int item : numInvertido) {
+            System.out.println(item);
+        }
+    }
+
+    public void ejercicio10() {
+        /*
+        Desarrolla un programa que pida al usuario cuántos estudiantes hay en una clase.
+        Crea un array para almacenar sus calificaciones (0-10).
+        Usa un bucle while para rellenar el array con las notas.
+        Luego, usa un bucle for para:
+            1. Mostrar todas las calificaciones
+            2. Calcular el promedio de la clase
+            3. Contar cuántos estudiantes aprobaron (nota ≥ 5)
+            4. Encontrar la nota más alta y la más baja
+        */
+
+        //Número de estudiante de clase
+        System.out.println("Introduce el número de estudiante de la clase");
+        int estudiantes = sc.nextInt();
+
+        //Array con tamaño del nº de estudiantes
+        double[] calificaciones = new double[estudiantes];
+
+        int contador = 1;
+        while (contador < estudiantes) {
+
+            for (int i = 0; i < calificaciones.length; i++) {
+                System.out.println("Introduce la nota del estudiante " + contador);
+                calificaciones[i] = sc.nextDouble();
+                contador++;
+            }
+        }
+
+        double promedio = 0;
+        int aprobado = 0;
+        double alta = calificaciones[0], baja = calificaciones[0];
+        contador = 1;
+
+        System.out.println("CALIFICACIONES:");
+        for (double item : calificaciones) {
+            System.out.println("Calificación estudiante "+contador+": "+item);
+
+            if (item>=5){
+                aprobado++;
+            }
+
+            if (item > alta) {
+                alta = item;
+            }
+
+            if (item > baja) {
+                baja = item;
+            }
+            promedio+=item;
+            contador++;
+        }
+
+        double resultadoPromedio = promedio/estudiantes;
+        System.out.println("PROMEDIO: "+resultadoPromedio);
+
+        System.out.println("ESTUDIANTES APROBADOS: "+aprobado);
+
+        System.out.println("NOTA MÁS ALTA: "+alta);
+        System.out.println("NOTA MÁS BAJA: "+baja);
 
     }
 }

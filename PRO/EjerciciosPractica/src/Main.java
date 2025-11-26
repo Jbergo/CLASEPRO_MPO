@@ -8,7 +8,10 @@ public class Main {
 //        EjerciciosT2 ejercicios = new EjerciciosT2();
 
         /*EJERCICIOS TEMA 3*/
-        EjerciciosSwitchFor ejercicios = new EjerciciosSwitchFor();
-        ejercicios.ejercicio9();
+//        EjerciciosSwitchFor ejercicios = new EjerciciosSwitchFor();
+
+        /*EJERCICIOS ARRAYS UNIDIMENSIONALES*/
+        EjerciciosArraysUnidimensionales ejercicios = new EjerciciosArraysUnidimensionales();
+        ejercicios.ejercicio10();
     }
 }
