@@ -11,7 +11,10 @@ public class Main {
 //        EjerciciosSwitchFor ejercicios = new EjerciciosSwitchFor();
 
         /*EJERCICIOS ARRAYS UNIDIMENSIONALES*/
-        EjerciciosArraysUnidimensionales ejercicios = new EjerciciosArraysUnidimensionales();
-        ejercicios.ejercicio10();
+//        EjerciciosArraysUnidimensionales ejercicios = new EjerciciosArraysUnidimensionales();
+
+        /*EJERCICIOS ARRAYS MULTIDIMENSIONALES*/
+        EjerciciosArraysMultidimensionales ejercicios = new EjerciciosArraysMultidimensionales();
+        ejercicios.ejercicio5();
     }
 }
