@@ -124,18 +124,53 @@ public class EjerciciosArraysMultidimensionales {
         double[][] matriz = new double[4][3];
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                matriz[i][j] = (Math.random()*15);
+                matriz[i][j] = (Math.random() * 15);
             }
         }
 
         double promedio = 0;
+        for (double[] doubles : matriz) {
+            for (double aDouble : doubles) {
+                System.out.printf("%.2f" + "\t", aDouble);
+                promedio += aDouble;
+            }
+            System.out.printf("Promedio = %.2f", (promedio / 3));
+            System.out.println();
+        }
+
+    }
+
+    public void ejercicio6() {
+        /*
+        Escribe un programa que cree una matriz de 3x4 con números.
+        Usa bucles for para encontrar el número mayor de cada columna
+        y muestra los resultados.
+         */
+
+        int[][] matriz = new int[3][4];
+
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[i].length; j++) {
-                System.out.printf("%.2f"+"\t", matriz[i][j]);
-                promedio += matriz[i][j];
+                matriz[i][j] = (int) (Math.random() * 15);
             }
-            System.out.printf("Promedio = %.2f", (promedio/3));
+        }
+
+        for (int[] item : matriz) {
+            for (int anitem : item) {
+                System.out.print(anitem + "\t");
+            }
             System.out.println();
+        }
+
+        int numMayor = 0;
+        for (int[] item : matriz) {
+            for (int anitem : item) {
+                if (anitem > numMayor) {
+                    numMayor = anitem;
+                }
+            }
+            System.out.print("N.M.: " + numMayor + "\t");
+            numMayor = 0;
         }
 
     }
