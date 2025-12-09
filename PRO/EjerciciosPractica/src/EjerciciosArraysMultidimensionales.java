@@ -162,16 +162,151 @@ public class EjerciciosArraysMultidimensionales {
             System.out.println();
         }
 
-        int numMayor = 0;
-        for (int[] item : matriz) {
-            for (int anitem : item) {
-                if (anitem > numMayor) {
-                    numMayor = anitem;
+        for (int i = 0; i < matriz[0].length; i++) {
+            int numMayor = matriz[0][i];
+            for (int j = 0; j < matriz.length; j++) {
+                if (matriz[j][i] > numMayor) {
+                    numMayor = matriz[j][i];
                 }
             }
-            System.out.print("N.M.: " + numMayor + "\t");
-            numMayor = 0;
+            System.out.println("NumMayor: " + numMayor);
         }
+
+    }
+
+    public void ejercicio7() {
+        /*
+        Crea un programa que defina una matriz de 3x4.
+        Usa bucles for anidados para crear una nueva matriz
+        transpuesta (4x3) donde las filas se convierten en columnas.
+        Muestra ambas matrices.
+         */
+
+        int[][] matriz = new int[3][4];
+
+        //Asignar valores a matriz
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = (int) (Math.random() * 14);
+            }
+        }
+
+        System.out.println("Matriz original");
+        //Mostrar matriz
+        for (int[] item : matriz) {
+            for (int anitem : item) {
+                System.out.print(anitem + "\t");
+            }
+            System.out.println();
+        }
+
+        int[][] matriz2 = new int[matriz[0].length][matriz.length];
+
+        //Recorrer matriz y guardar en matriz2
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz2[j][i] = matriz[i][j];
+            }
+        }
+
+        System.out.println("Matriz transpuesta");
+        //Mostrar matriz2
+        for (int[] item : matriz2) {
+            for (int anitem : item) {
+                System.out.print(anitem + "\t");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void ejercicio8() {
+        /*
+        Desarrolla un programa que cree una matriz de 4x5 con números enteros.
+        Usa bucles for anidados para contar cuántos números
+        pares e impares hay en toda la matriz.
+        Muestra ambos contadores.
+         */
+
+        //Creación array y variables
+        int[][] matriz = new int[4][5];
+        int pares = 0, impares = 0;
+
+        //Asignar valores a matriz
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = (int) (Math.random() * 25);
+            }
+        }
+
+        //Validación par o impar
+        for (int[] item : matriz) {
+            for (int anitem : item) {
+                if (anitem % 2 == 0) {
+                    pares++;
+                } else {
+                    impares++;
+                }
+            }
+        }
+
+        //Mostrar resultado
+        System.out.println("Pares: " + pares + "\t Impares: " + impares);
+
+    }
+
+    public void ejercicio9() {
+        /*
+        Escribe un programa que genere una matriz de 10x10 que
+        represente las tablas de multiplicar del 1 al 10.
+        Usa bucles for anidados para llenar la matriz donde
+        cada elemento [i][j] contenga el resultado de (i+1) * (j+1).
+        Muestra la matriz completa.
+        */
+
+        //Crear array
+        int[][] matriz = new int[10][10];
+
+        //Asignar valores a matriz
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[i].length; j++) {
+                matriz[i][j] = (i + 1) * (j + 1);
+            }
+        }
+
+        //Mostrar matriz
+        for (int[] item : matriz) {
+            for (int anitem : item) {
+                System.out.print(anitem + "\t");
+            }
+            System.out.println();
+        }
+
+    }
+
+    public void ejercicio10(){
+        /*
+        Desarrolla un programa que pida al usuario cuántos estudiantes
+        y cuántas asignaturas hay. Crea una matriz para almacenar las
+        notas (estudiantes x asignaturas).
+        Usa bucles for anidados para rellenar la matriz con las notas.
+        Luego:
+            1. Muestra todas las notas en formato de tabla
+
+            2. Calcula y muestra el promedio de cada estudiante
+
+            3. Calcula y muestra el promedio de cada asignatura
+
+            4. Encuentra la nota más alta de toda la clase y su posición
+         */
+
+        /*
+                         asignatura 1 | asignatura 2 | asignatura 3 | asignatura4
+        Estudiante 1 -> {nota1        , nota 2       , nota 3       , nota4      }
+        Estudiante 2 -> {nota1        , nota 2       , nota 3       , nota4      }
+        Estudiante 3 -> {nota1        , nota 2       , nota 3       , nota4      }
+         */
+
 
     }
 }

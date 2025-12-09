@@ -15,6 +15,6 @@ public class Main {
 
         /*EJERCICIOS ARRAYS MULTIDIMENSIONALES*/
         EjerciciosArraysMultidimensionales ejercicios = new EjerciciosArraysMultidimensionales();
-        ejercicios.ejercicio6();
+        ejercicios.ejercicio9();
     }
 }
