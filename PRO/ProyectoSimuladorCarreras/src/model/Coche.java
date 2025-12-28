@@ -5,13 +5,13 @@ public class Coche {
     /*ATRIBUTOS*/
     private String marca;
     private String modelo;
-    private double km;
+    private int km;
     private int acumPuntos;
 
     /*CONSTRUCTORES*/
     public Coche (){}
 
-    public Coche (String marca, String modelo, double km) {
+    public Coche (String marca, String modelo, int km) {
         this.marca = marca;
         this.modelo = modelo;
         this.km = km;
@@ -34,11 +34,19 @@ public class Coche {
         this.modelo = modelo;
     }
 
-    public double getKm() {
+    public int getKm() {
         return km;
     }
 
-    public void setKm(double km) {
+    public void setKm(int km) {
         this.km = km;
+    }
+
+    public int getAcumPuntos() {
+        return acumPuntos;
+    }
+
+    public void setAcumPuntos(int acumPuntos) {
+        this.acumPuntos = acumPuntos;
     }
 }

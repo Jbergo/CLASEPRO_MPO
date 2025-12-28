@@ -6,10 +6,12 @@ public class Carrera {
 
     /*ATRIBUTOS*/
     private ArrayList<Coche> participantes;
+    private int kmTotales;
 
     /*CONSTRUCTORES*/
-    public Carrera() {
+    public Carrera(int kmTotales) {
         participantes = new ArrayList<>();
+        this.kmTotales = kmTotales;
     }
 
     /*METODOS*/
@@ -24,5 +26,13 @@ public class Carrera {
 
     public void setParticipantes(ArrayList<Coche> participantes) {
         this.participantes = participantes;
+    }
+
+    public int getKmTotales() {
+        return kmTotales;
+    }
+
+    public void setKmTotales(int kmTotales) {
+        this.kmTotales = kmTotales;
     }
 }
