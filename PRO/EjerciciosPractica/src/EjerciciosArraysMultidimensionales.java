@@ -284,7 +284,7 @@ public class EjerciciosArraysMultidimensionales {
 
     }
 
-    public void ejercicio10(){
+    public void ejercicio10() {
         /*
         Desarrolla un programa que pida al usuario cuántos estudiantes
         y cuántas asignaturas hay. Crea una matriz para almacenar las
@@ -306,6 +306,76 @@ public class EjerciciosArraysMultidimensionales {
         Estudiante 2 -> {nota1        , nota 2       , nota 3       , nota4      }
         Estudiante 3 -> {nota1        , nota 2       , nota 3       , nota4      }
          */
+
+        //Crear array con nº estudiantes
+        System.out.println("¿Cuántos estudiantes hay?");
+        int nAlumnos = sc.nextInt();
+        System.out.println("¿Cuántas asignaturas tienen?");
+        int nAsignaturas = sc.nextInt();
+
+        int[][] notas = new int[nAlumnos][nAsignaturas];
+
+        //Almacenar nota en notas
+        for (int i = 0; i < notas.length; i++) {
+            for (int j = 0; j < notas[i].length; j++) {
+                System.out.println("Introduce la nota " + (j + 1) + " del estudiante " + (i + 1));
+                int nota = sc.nextInt();
+                while (!(nota >= 0 && nota <= 10)) {
+                    System.out.println("Nota incorrecta, vuelve a introducirla");
+                    nota = sc.nextInt();
+                }
+                notas[i][j] = nota;
+            }
+        }
+
+        //Mostrar notas
+        for (int[] nota : notas) {
+            System.out.println("Estudiante " + (notas.length + 1));
+            for (int i : nota) {
+                System.out.print(i + "\t" + "|" + "\t");
+            }
+            System.out.println();
+        }
+
+        //Calcular promedio de cada estudiante
+        int acumuladorEst = 0, nNotas = 1;
+        for (int[] item : notas) {
+            for (int anItem : item) {
+                acumuladorEst += anItem;
+                nNotas++;
+            }
+            System.out.println("Promedio: " + (acumuladorEst / nNotas));
+            acumuladorEst = 0;
+            nNotas = 1;
+        }
+
+        //Calcular promedio de cada asignatura
+        int acumuladorAs = 0;
+        for (int i = 0; i < notas[0].length; i++) {
+            for (int[] nota : notas) {
+                acumuladorAs += nota[i];
+            }
+            System.out.println("Promedio: " + (acumuladorAs / nAsignaturas));
+            acumuladorAs = 0;
+        }
+
+        //Nota más alta y más baja de notas
+        int notaAlta = notas[0][0], notaBaja = notas[0][0];
+
+        for (int[] item : notas) {
+            for (int anItem : item) {
+                if (anItem > notaAlta) {
+                    notaAlta = anItem;
+                }
+                if (anItem < notaBaja) {
+                    notaBaja = anItem;
+                }
+            }
+
+        }
+
+        System.out.println("Nota más alta: " + notaAlta);
+        System.out.println("Nota más baja: " + notaBaja);
 
 
     }

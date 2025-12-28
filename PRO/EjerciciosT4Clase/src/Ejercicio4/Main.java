@@ -1,5 +1,6 @@
 package Ejercicio4;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +12,7 @@ public class Main {
      */
 
     static Scanner sc = new Scanner(System.in);
+    static Random rd = new Random();
 
     static String[] bombo1 = new String[5];
     static String[] bombo2 = new String[5];
@@ -18,31 +20,41 @@ public class Main {
     public static void main(String[] args) {
 
         //Asignar valores bombos 1 y 2
-        for (int i = 0; i < bombo1.length; i++) {
-            System.out.println("Introduce el nombre de la seleccion " + i + " del bombo 1");
-            String seleccion = sc.next();
-            bombo1[i] = seleccion;
+        asignarValores(bombo1);
+        asignarValores(bombo2);
+
+        //Realizar emparejamientos
+        emparejamiento(bombo1, bombo2);
+
+    }
+
+    private static void asignarValores(String[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.println("Introduce el nombre de la selección " + i + " del bombo 1");
+            array[i] = sc.next();
         }
-
-        for (int i = 0; i < bombo2.length; i++) {
-            System.out.println("Introduce el nombre de la seleccion " + i + " del bombo 2");
-            String seleccion = sc.next();
-            bombo2[i] = seleccion;
-        }
-
-
-        //Mostrar bombo 1 y 2
-        System.out.println("Bombo 1");
-        mostrarArray(bombo1);
-
-        System.out.println("\n Bombo 2");
-        mostrarArray(bombo2);
-
     }
 
     private static void mostrarArray(String[] array) {
         for (String item : array) {
             System.out.print(item + "\t");
+        }
+    }
+
+    private static void emparejamiento(String[] array, String[] array2) {
+        String[] replicaArray = array2.clone();
+
+        //Aleatorizar bombo2
+        for (int i = 0; i < replicaArray.length; i++) {
+            int j = rd.nextInt();
+            String temp = replicaArray[i];
+            replicaArray[i] = replicaArray[j];
+            replicaArray[j] = temp;
+        }
+
+        //Emparejamientos
+        for (int i = 0; i < array.length; i++) {
+            System.out.println(array[i] + " vs " + replicaArray[i]);
         }
     }
 }
