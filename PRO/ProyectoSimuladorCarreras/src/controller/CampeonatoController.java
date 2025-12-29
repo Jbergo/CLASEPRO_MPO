@@ -10,8 +10,10 @@ import java.util.Comparator;
 public class CampeonatoController {
 
     private CarreraController carreraController = new CarreraController();
+    private int numCarrera = 1;
 
     public ArrayList<Coche> ejecutarCampeonato(Campeonato campeonato) {
+        numCarrera = 1;
 
         //Copiar lista de participantes en clasificacion
         if (campeonato.getClasificacion().isEmpty() && !campeonato.getCarreras().isEmpty()) {
@@ -26,11 +28,19 @@ public class CampeonatoController {
                 coche.setKm(0);
             }
 
-            //Ejecutar carrera
-            carreraController.ejecutarCarrera(carrera);
+            //Ejecutar carrera y guardar podio
+            ArrayList<Coche> podio = carreraController.ejecutarCarrera(carrera);
 
             //Ordenar clasificacion
             ordenarClasificacion(campeonato);
+
+            //Mostrar clasificacion de cada carrera
+            mostrarCarrera(podio);
+
+            //Mostrar Clasificacion
+            mostrarClasificacion(campeonato.getClasificacion());
+
+            numCarrera++;
         }
 
         return campeonato.getClasificacion();
@@ -51,4 +61,30 @@ public class CampeonatoController {
         });
     }
 
+    private void mostrarCarrera(ArrayList<Coche> podio) {
+        int[] puntos = {10, 8, 6};
+        System.out.println("===CARRERA " + numCarrera + " ===");
+        for (int i = 0; i < podio.size() && i < 3; i++) {
+            Coche coche = podio.get(i);
+            System.out.println((i + 1) + "º - " + coche.getMarca() + " " + coche.getModelo() + "[" + puntos[i] + " puntos]");
+        }
+        System.out.println();
+    }
+
+    private static void mostrarClasificacion(ArrayList<Coche> clasificacionFinal) {
+        System.out.println("=== CLASIFICACIÓN GENERAL ===");
+        System.out.printf("%-10s | %-20s | %-10s | %-10s%n", "Posición", "Piloto", "Dorsal", "Puntos");
+        System.out.println("--------------------------------------------------------------");
+
+        for (int i = 0; i < clasificacionFinal.size(); i++) {
+            Coche coche = clasificacionFinal.get(i);
+            String piloto = coche.getMarca() + " " + coche.getModelo();
+
+            System.out.printf("%-10s | %-20s | %-10d | %-10d%n",
+                    (i + 1) + "º",
+                    piloto,
+                    coche.getDorsal(),
+                    coche.getAcumPuntos());
+        }
+    }
 }

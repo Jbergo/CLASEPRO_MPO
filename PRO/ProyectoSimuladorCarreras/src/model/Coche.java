@@ -7,14 +7,17 @@ public class Coche {
     private String modelo;
     private int km;
     private int acumPuntos;
+    private int dorsal;
 
     /*CONSTRUCTORES*/
-    public Coche (){}
+    public Coche() {
+    }
 
-    public Coche (String marca, String modelo, int km) {
+    public Coche(String marca, String modelo, int km, int dorsal) {
         this.marca = marca;
         this.modelo = modelo;
         this.km = km;
+        this.dorsal = dorsal;
     }
 
     /*GETTER and SETTER*/
@@ -48,5 +51,13 @@ public class Coche {
 
     public void setAcumPuntos(int acumPuntos) {
         this.acumPuntos = acumPuntos;
+    }
+
+    public int getDorsal() {
+        return dorsal;
+    }
+
+    public void setDorsal(int dorsal) {
+        this.dorsal = dorsal;
     }
 }

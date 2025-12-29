@@ -8,12 +8,10 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static Scanner sc = new Scanner(System.in);
-    private static ArrayList<Coche> coches = new ArrayList<>();
-    private static Coche coche;
-    private static Carrera carrera;
-    private static Campeonato campeonato = new Campeonato();
-    private static CampeonatoController campeonatoController = new CampeonatoController();
+    private static final Scanner sc = new Scanner(System.in);
+    private static final ArrayList<Coche> coches = new ArrayList<>();
+    private static final Campeonato campeonato = new Campeonato();
+    private static final CampeonatoController campeonatoController = new CampeonatoController();
 
     public static void main(String[] args) {
 
@@ -28,8 +26,9 @@ public class Main {
             System.out.println("Introduce el modelo");
             String modelo = sc.next();
             int km = 0;
+            int dorsal = i + 1;
 
-            coche = new Coche(marca, modelo, km);
+            Coche coche = new Coche(marca, modelo, km, dorsal);
             coches.add(coche);
         }
 
@@ -38,8 +37,8 @@ public class Main {
         int nCarreras = sc.nextInt();
 
         for (int i = 0; i < nCarreras; i++) {
-            System.out.println("¿Cuántos km va a tener la carrera " + i + "?");
-            carrera = new Carrera(sc.nextInt());
+            System.out.println("¿Cuántos km va a tener la carrera " + (i + 1) + "?");
+            Carrera carrera = new Carrera(sc.nextInt());
             for (Coche coche : coches) {
                 carrera.addParticipante(coche);
             }
@@ -48,15 +47,7 @@ public class Main {
         }
 
         //Ejecutar campeonato
-        ArrayList<Coche> clasificacionFinal = campeonatoController.ejecutarCampeonato(campeonato);
-
-        //Mostrar clasificacion
-        for (Coche coche : clasificacionFinal) {
-            System.out.println("""
-                    
-                    """);
-        }
-
+        campeonatoController.ejecutarCampeonato(campeonato);
 
         sc.close();
     }
