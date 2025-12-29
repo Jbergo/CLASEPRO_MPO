@@ -55,7 +55,7 @@ public class CampeonatoController {
                 } else if (c1.getAcumPuntos() < c2.getAcumPuntos()) {
                     return 1;
                 } else {
-                    return 0;
+                    return Integer.compare(c1.getDorsal(), c2.getDorsal());
                 }
             }
         });
@@ -63,10 +63,10 @@ public class CampeonatoController {
 
     private void mostrarCarrera(ArrayList<Coche> podio) {
         int[] puntos = {10, 8, 6};
-        System.out.println("===CARRERA " + numCarrera + " ===");
+        System.out.println("=== CARRERA " + numCarrera + " ===");
         for (int i = 0; i < podio.size() && i < 3; i++) {
             Coche coche = podio.get(i);
-            System.out.println((i + 1) + "º - " + coche.getMarca() + " " + coche.getModelo() + "[" + puntos[i] + " puntos]");
+            System.out.println((i + 1) + "º - " + coche.getMarca() + " " + coche.getModelo() + " [" + puntos[i] + " puntos]");
         }
         System.out.println();
     }

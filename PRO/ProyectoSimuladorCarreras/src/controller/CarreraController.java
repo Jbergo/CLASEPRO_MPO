@@ -61,7 +61,7 @@ public class CarreraController {
                 } else if (c1.getKm() < c2.getKm()) {
                     return 1;
                 } else {
-                    return 0;
+                    return Integer.compare(c1.getDorsal(), c2.getDorsal());
                 }
             }
         });
