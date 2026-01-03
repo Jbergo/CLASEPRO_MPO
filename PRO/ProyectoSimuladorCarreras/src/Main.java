@@ -6,6 +6,13 @@ import model.Coche;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Proyecto: Cuadrado Mágico
+ * Descripción: Genera y simula un campeonato con una serie de carreras y coches.
+ *
+ * @author Jorge Bermúdez
+ */
+
 public class Main {
 
     private static final Scanner sc = new Scanner(System.in);

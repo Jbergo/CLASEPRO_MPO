@@ -1,5 +1,12 @@
 import java.util.Scanner;
 
+/**
+ * Proyecto: Cuadrado Mágico
+ * Descripción: Genera y valida matrices mágicas de tamaño n
+ *
+ * @author Jorge Bermúdez
+ */
+
 public class Main {
 
     private static final Scanner sc = new Scanner(System.in);
