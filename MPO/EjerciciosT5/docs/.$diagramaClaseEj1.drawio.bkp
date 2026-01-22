@@ -1,0 +1,69 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.2.9 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.2.9">
+  <diagram name="Página-1" id="BjCQO17fmnfQvoexH_6h">
+    <mxGraphModel dx="567" dy="366" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sPFteBqrKugABSJo5IYz-21" edge="1" parent="1" source="sPFteBqrKugABSJo5IYz-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="sPFteBqrKugABSJo5IYz-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Alumno" vertex="1">
+          <mxGeometry height="198" width="160" x="350" y="190" as="geometry">
+            <mxRectangle height="30" width="80" x="360" y="160" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-2" parent="sPFteBqrKugABSJo5IYz-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- dni: String" vertex="1">
+          <mxGeometry height="26" width="160" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-5" parent="sPFteBqrKugABSJo5IYz-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nombre: String" vertex="1">
+          <mxGeometry height="26" width="160" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-8" parent="sPFteBqrKugABSJo5IYz-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- apellido: String" vertex="1">
+          <mxGeometry height="26" width="160" y="78" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-9" parent="sPFteBqrKugABSJo5IYz-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- nota: double" vertex="1">
+          <mxGeometry height="26" width="160" y="104" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-3" parent="sPFteBqrKugABSJo5IYz-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="160" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-10" parent="sPFteBqrKugABSJo5IYz-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ Alumno(allParameters): void" vertex="1">
+          <mxGeometry height="33" width="160" y="138" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-4" parent="sPFteBqrKugABSJo5IYz-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getter/setter" vertex="1">
+          <mxGeometry height="27" width="160" y="171" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-11" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="GestionNotas" vertex="1">
+          <mxGeometry height="331" width="210" x="600" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-12" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- alumnos: HashMap&amp;lt;String, Alumno&amp;gt;" vertex="1">
+          <mxGeometry height="36" width="210" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-13" parent="sPFteBqrKugABSJo5IYz-11" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
+          <mxGeometry height="8" width="210" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-14" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ GestionNotas(): void" vertex="1">
+          <mxGeometry height="26" width="210" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-15" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ getter/setter" vertex="1">
+          <mxGeometry height="26" width="210" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-16" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ introducirAlumno(dni: String, nombre: String, apellido: String, nota: double): boolean" vertex="1">
+          <mxGeometry height="53" width="210" y="122" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-17" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;+ buscarAlumnoNota(dni: String): double&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="39" width="210" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-18" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ verMejoresExpedientes(limite: int): ArrayList&amp;lt;Alumno&amp;gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="39" width="210" y="214" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-19" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ verExpedientesSuperiores(nota: double): ArrayList&amp;lt;Alumno&amp;gt;" vertex="1">
+          <mxGeometry height="39" width="210" y="253" as="geometry" />
+        </mxCell>
+        <mxCell id="sPFteBqrKugABSJo5IYz-20" parent="sPFteBqrKugABSJo5IYz-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ vaciarLista(): void" vertex="1">
+          <mxGeometry height="39" width="210" y="292" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
