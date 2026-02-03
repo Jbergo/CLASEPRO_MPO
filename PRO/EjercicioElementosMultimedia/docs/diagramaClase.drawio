@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram name="Página-1" id="KTnlF6s6ifNUgsNo8w-L">
-    <mxGraphModel dx="1219" dy="1022" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+    <mxGraphModel dx="1463" dy="1226" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -125,7 +125,7 @@
           <mxGeometry height="26" width="160" y="138" as="geometry" />
         </mxCell>
         <mxCell id="idVe-lcfqUsfLLOZ36Bz-39" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="GestionApp" vertex="1">
-          <mxGeometry height="276" width="237" x="815" y="315" as="geometry" />
+          <mxGeometry height="330" width="237" x="815" y="315" as="geometry" />
         </mxCell>
         <mxCell id="idVe-lcfqUsfLLOZ36Bz-40" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- listaElementos: HashMap&amp;lt;Integer, ElementoMultimedia&amp;gt;" vertex="1">
           <mxGeometry height="38" width="237" y="26" as="geometry" />
@@ -148,11 +148,17 @@
         <mxCell id="idVe-lcfqUsfLLOZ36Bz-46" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ eliminarElemento(id: int): boolean" vertex="1">
           <mxGeometry height="27" width="237" y="195" as="geometry" />
         </mxCell>
-        <mxCell id="idVe-lcfqUsfLLOZ36Bz-47" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="@ listarElementos(nombre: String): void" vertex="1">
+        <mxCell id="idVe-lcfqUsfLLOZ36Bz-47" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="@ listarElementos(tipo: String): void" vertex="1">
           <mxGeometry height="27" width="237" y="222" as="geometry" />
         </mxCell>
-        <mxCell id="idVe-lcfqUsfLLOZ36Bz-64" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="@buscarElemento(nombre: String): void" vertex="1">
+        <mxCell id="idVe-lcfqUsfLLOZ36Bz-64" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="@buscarPorAutor(autor: String): void" vertex="1">
           <mxGeometry height="27" width="237" y="249" as="geometry" />
+        </mxCell>
+        <mxCell id="XzwgkvwGhJ3avR6Y2KTn-1" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="@buscarPorActor(actor: String): void" vertex="1">
+          <mxGeometry height="27" width="237" y="276" as="geometry" />
+        </mxCell>
+        <mxCell id="XzwgkvwGhJ3avR6Y2KTn-2" parent="idVe-lcfqUsfLLOZ36Bz-39" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="@buscarPorDirector(director: String): void" vertex="1">
+          <mxGeometry height="27" width="237" y="303" as="geometry" />
         </mxCell>
         <mxCell id="idVe-lcfqUsfLLOZ36Bz-62" edge="1" parent="1" source="idVe-lcfqUsfLLOZ36Bz-60" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="idVe-lcfqUsfLLOZ36Bz-39">
           <mxGeometry relative="1" as="geometry" />
@@ -162,8 +168,8 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="idVe-lcfqUsfLLOZ36Bz-60" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ListarYBuscar&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- nombre: String&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ listarElementos(nombre: string): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ buscarElemento(nombre: String): void&lt;/p&gt;" vertex="1">
-          <mxGeometry height="138" width="190" x="838.5" y="25" as="geometry" />
+        <mxCell id="idVe-lcfqUsfLLOZ36Bz-60" parent="1" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ListarYBuscar&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ listarElementos(tipo: String): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ buscarPorAutor(autor: String): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ buscarPorActor(actor: String): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ buscarPorDirector(director: String): void&lt;/p&gt;" vertex="1">
+          <mxGeometry height="138" width="227.5" x="819.75" y="51" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
