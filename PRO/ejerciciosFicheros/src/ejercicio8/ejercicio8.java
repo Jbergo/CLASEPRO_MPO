@@ -23,11 +23,15 @@ public class ejercicio8 {
             br = new BufferedReader(new FileReader(file));
 
             String linea;
-            String[] archivo = new String[0];
-            while ((linea = br.readLine()) != null) {
-                archivo = linea.split(",");
+            int contador = 0;
+            while((linea = br.readLine()) != null){
+                linea = linea.replaceAll("[^\\p{L}\\p{N}]+", " ").trim();
+                if (!linea.isEmpty()){
+                    contador += linea.split("\\s+").length;
+                }
             }
-            System.out.println("Palabras del archivo = " + archivo.length);
+
+            System.out.println("Palabras = " + contador);
 
         } catch (FileNotFoundException e) {
             System.out.println("Error al buscar el archivo");
