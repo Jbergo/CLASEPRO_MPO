@@ -6,9 +6,9 @@ import model.Libro;
 import java.util.List;
 
 public class BibliotecaController {
-    private Biblioteca biblioteca;
-    private APIController apiController;
-    private FileController filecontroller;
+    private final Biblioteca biblioteca;
+    private final APIController apiController;
+    private final FileController filecontroller;
 
     public BibliotecaController() {
         this.apiController = new APIController();

@@ -28,14 +28,7 @@ public class Libro implements Serializable {
 
     @Override
     public String toString() {
-        return "Libro{" +
-                "id=" + id +
-                ", year=" + year +
-                ", pages=" + pages +
-                ", title='" + title + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", isbn='" + isbn + '\'' +
-                '}';
+        return "Libro{" + "id=" + id + ", year=" + year + ", pages=" + pages + ", title='" + title + '\'' + ", publisher='" + publisher + '\'' + ", isbn='" + isbn + '\'' + '}';
     }
 
     public Libro() {

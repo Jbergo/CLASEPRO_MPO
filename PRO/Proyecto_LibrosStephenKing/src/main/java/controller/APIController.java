@@ -46,7 +46,6 @@ public class APIController {
 
         } catch (Exception e) {
             System.out.println("Error al importar los libros");
-            e.printStackTrace();
         }
 
         return libros;
@@ -74,7 +73,6 @@ public class APIController {
 
         } catch (Exception e) {
             System.out.println("Error con la búsqueda del libro");
-            e.printStackTrace();
         }
 
         return null;

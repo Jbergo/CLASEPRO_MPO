@@ -21,11 +21,10 @@ public class FileController {
 
         } catch (Exception e) {
             System.out.println("Error en la escritura del fichero");
-            e.printStackTrace();
         }
     }
 
-    public List<Libro> importarFavoritos(){
+    public List<Libro> importarFavoritos() {
         try {
             FileInputStream file = new FileInputStream(FILE_NAME);
             ObjectInputStream object = new ObjectInputStream(file);
@@ -35,13 +34,10 @@ public class FileController {
 
         } catch (FileNotFoundException e) {
             System.out.println("Archivo no encontrado");
-            e.printStackTrace();
         } catch (IOException e) {
             System.out.println("Error con el objeto del archivo");
-            e.printStackTrace();
         } catch (ClassNotFoundException e) {
             System.out.println("Objeto no encontrado");
-            e.printStackTrace();
         }
 
         return new ArrayList<>();
